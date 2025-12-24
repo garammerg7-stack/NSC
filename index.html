@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System Converter | Precision Tools</title>
+    <meta name="description" content="A premium tool to convert between Decimal, Binary, and Hexadecimal systems instantly.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <main class="card">
+            <header>
+                <h1>System Converter</h1>
+                <p class="subtitle">Convert between computer number systems instantly</p>
+            </header>
+
+            <div class="converter-group">
+                <!-- Decimal Input -->
+                <div class="input-wrapper">
+                    <label for="decimal">Decimal (Base 10)</label>
+                    <input type="text" id="decimal" placeholder="Enter decimal number..." autocomplete="off">
+                    <button class="copy-btn" data-target="decimal" title="Copy to clipboard">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                        </svg>
+                    </button>
+                    <div class="validation-msg" id="msg-decimal">Invalid decimal number</div>
+                    <div class="tooltip" id="tip-decimal">Copied!</div>
+                </div>
+
+                <!-- Binary Input -->
+                <div class="input-wrapper">
+                    <label for="binary">Binary (Base 2)</label>
+                    <input type="text" id="binary" placeholder="Enter binary number..." autocomplete="off">
+                    <button class="copy-btn" data-target="binary" title="Copy to clipboard">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                        </svg>
+                    </button>
+                    <div class="validation-msg" id="msg-binary">Invalid binary (0 and 1 only)</div>
+                    <div class="tooltip" id="tip-binary">Copied!</div>
+                </div>
+
+                <!-- Hexadecimal Input -->
+                <div class="input-wrapper">
+                    <label for="hex">Hexadecimal (Base 16)</label>
+                    <input type="text" id="hex" placeholder="Enter hex number..." autocomplete="off">
+                    <button class="copy-btn" data-target="hex" title="Copy to clipboard">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                        </svg>
+                    </button>
+                    <div class="validation-msg" id="msg-hex">Invalid hexadecimal (0-9, A-F)</div>
+                    <div class="tooltip" id="tip-hex">Copied!</div>
+                </div>
+            </div>
+
+            <footer>
+                <p>Designed for Developers & Students</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
